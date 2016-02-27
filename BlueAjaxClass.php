@@ -4,6 +4,10 @@ class AjaxResponse {
     
     private $response = Array();
     
+    /**
+     * Builds an AjaxResponse
+     * @param type $baseArray An array to start from as the response, will be JSON encoded
+     */
     public function __construct($baseArray = Array()) {
         $this->response = $baseArray;
     }
@@ -41,10 +45,20 @@ class AjaxResponse {
        if ($cond) $this->assert ($test, $error, $json);
    }
    
+   /**
+    * Add a value to the response array
+    * @param type $key
+    * @param type $value
+    */
    function addResponse($key, $value) {
        $this->response[$key] = $value;
    }
    
+   /**
+    * Send the response
+    * @param type $response - Default Array() The response to send as an array to be json_encoded
+    * @param type $add - Default TRUE then megre the response arg and the running response arrray, otherwise it will just use $response
+    */
    function respond($response=Array(), $add=TRUE) {
        if ($add) die(json_encode (array_merge ($this->response, $response)));
        json_encode($response);
