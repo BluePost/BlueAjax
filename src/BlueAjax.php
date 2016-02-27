@@ -6,4 +6,4 @@ if (isset($info) && $info) {
 
 require_once __DIR__ . '/functions/isset.php';
 require_once __DIR__ . '/functions/utils.php';
-require_once __DIR__ . '/BlueAjaxClass.php';
+require_once __DIR__ . '/AjaxResponse.php';
