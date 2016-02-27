@@ -1,11 +1,18 @@
 # BlueAjax
 Super-Simple framework for making AJAX easier to deal with on the PHP side.
 
-## Getting Started
-To get started with this, simply require in BlueAjax.php or use <a href="https://getcomposer.org/">Composer</a>:
-    ```php
-    composer require bluepost/blueajax
-    ```
+##Getting Started
+### Installation with <a href="https://getcomposer.org/">Composer</a> <b>Recommended</b>
+We recommend you install the package with Composer:
+```
+composer require bluepost/blueajax
+```
+### Installation
+Alternatively you can download the <a href="https://github.com/BluePost/BlueAjax/releases/latest">Latest Release</a>, unzip it, and upload the src folder to your environment. Then require it for every file for which you need it. 
+```php
+require_once ('BlueAjax.php');
+```
+
 ## Using BlueAjax
 ```php
     <?php
