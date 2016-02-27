@@ -1,7 +1,7 @@
 <?php
 //Require in the BlueAjax library, also display info about it
 $info = TRUE;
-require_once '../BlueAjax.php';
+require_once __DIR__ . '/../BlueAjax.php';
 
 if (GETisset("old", FALSE)) {
     //OLD TESTS, Deprecated
