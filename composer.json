@@ -1,5 +1,5 @@
 {
-    "name": "BluePost/BlueAjax",
+    "name": "bluebost/blueajax",
     "type": "library",
     "description": "Super-Simple framework for making AJAX easier to deal with on the PHP side",
     "keywords": ["ajax","bluepost"],
