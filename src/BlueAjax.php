@@ -1,4 +1,5 @@
 <?php
+die('BLUEAJAXLOADED');
 if (isset($info) && $info) {
     echo "BlueAjax - A simple framework for PHP ajax endpoints<br/>";
     echo "Created by BluePost Development<br/>";
