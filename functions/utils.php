@@ -10,3 +10,8 @@ function error ($text, $index = "error", $orriginal = Array()) {
     $orriginal[$index] = $text;
     return $orriginal;
 }
+
+function success($text, $index = "success", $orriginal = Array()) {
+    $orriginal[$index] = $text;
+    return $orriginal;
+}
