@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Testing the JS section</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src = "https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src = "/JS/BlueAjax.js"></script>
+        <script>
+            var req = new GetAjaxRequest ("/src/tests/test.php", {"q": 1, "text":"Text here"})
+                    .onError(function (f) {console.log(f)})
+                    .onSuccess(function (s) {console.log(s)})
+                    .execute()
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

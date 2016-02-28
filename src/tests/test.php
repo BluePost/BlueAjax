@@ -1,6 +1,6 @@
 <?php
 //Require in the BlueAjax library, also display info about it
-$info = TRUE;
+$info = isset($_GET["info"]);
 require_once __DIR__ . '/../BlueAjax.php';
 
 if (GETisset("old", FALSE)) {
