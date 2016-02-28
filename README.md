@@ -1,5 +1,5 @@
 # BlueAjax
-Super-Simple framework for making AJAX easier to deal with on the PHP side.
+Super-Simple framework for making AJAX easier to deal with on the PHP side. It also includes some JS objects for communicating with an AJAX php script built using this lib.
 
 ##Getting Started
 ### Installation with <a href="https://getcomposer.org/">Composer</a> (<b>Recommended</b>)
@@ -12,6 +12,9 @@ Alternatively you can download the <a href="https://github.com/BluePost/BlueAjax
 ```php
 require_once ('BlueAjax.php');
 ```
+
+### JavaScript
+The javsript components are all in JS/BlueAjax.js file.
 
 ## Using BlueAjax
 ```php
@@ -27,4 +30,15 @@ require_once ('BlueAjax.php');
     $response->condAssert($_GET["q"] == 1, GETisset("text"), error("text not set"));
     //Respond with an "All good!" message
     $response->respond(success("All good!"));
+```
+
+```html
+    <script src = "https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src = "/JS/BlueAjax.js"></script>
+    <script>
+        var req = new GetAjaxRequest ("/src/tests/test.php", {"q": 1, "text":"Text here"})
+                .onError(function (f) {console.log(f)})
+                .onSuccess(function (s) {console.log(s)})
+                .execute()
+    </script>
 ```
