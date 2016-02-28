@@ -2,7 +2,7 @@
 Super-Simple framework for making AJAX easier to deal with on the PHP side.
 
 ##Getting Started
-### Installation with <a href="https://getcomposer.org/">Composer</a> <b>Recommended</b>
+### Installation with <a href="https://getcomposer.org/">Composer</a> (<b>Recommended</b>)
 We recommend you install the package with Composer:
 ```
 composer require bluepost/blueajax
