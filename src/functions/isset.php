@@ -6,7 +6,14 @@
  * @return boolean
  */
 function GETisset ($index, $harsh = TRUE) {
-    return ($harsh ? strictIsset($_GET[$index]) : laxIsset($_GET[$index]));
+    set_error_handler(function () {});
+    $val = FALSE;
+    try {
+        $val = ($harsh ? strictIsset($_GET[$index]) : laxIsset($_GET[$index]));
+    }
+    catch (Exception $e) {$val = FALSE;}
+    restore_error_handler();
+    return $val;
 }
 
 /**
@@ -16,7 +23,14 @@ function GETisset ($index, $harsh = TRUE) {
  * @return boolean
  */
 function POSTisset($index, $harsh = TRUE) {
-    return ($harsh ? strictIsset($_POST[$index]) : laxIsset($_POST[$index]));
+    set_error_handler(function () {});
+    $val = FALSE;
+    try {
+        $val = ($harsh ? strictIsset($_POST[$index]) : laxIsset($_POST[$index]));
+    }
+    catch (Exception $e) {$val = FALSE;}
+    restore_error_handler();
+    return $val;
 }
 
 /**
