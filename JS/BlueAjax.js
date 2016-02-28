@@ -12,6 +12,10 @@ function GetAjaxRequest(resource, data, successKey, errorKey) {
     
     this.onBadJSONFunction = function (data) {console.log("BAD JSON")}
     
+    this.onFailFunction = function () {
+        console.log("Resource " + this.url + " failed to load")
+    }
+    
     this.onError = function (f) {
         this.onErrorFunction = f
         return this
@@ -24,6 +28,11 @@ function GetAjaxRequest(resource, data, successKey, errorKey) {
     
     this.onBadJSON = function (f) {
         this.onBadJSONFunction = f
+        return this
+    }
+    
+    this.onFail = function (f) {
+        this.onFailFunction = f
         return this
     }
     
@@ -49,6 +58,7 @@ function GetAjaxRequest(resource, data, successKey, errorKey) {
                 me.onSuccessFunction (data)
             }
         })
+        .fail(me.onFailFunction)
     }
     
 }   

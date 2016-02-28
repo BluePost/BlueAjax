@@ -5,11 +5,12 @@
     "keywords": ["ajax","bluepost"],
     "homepage": "https://github.com/BluePost/BlueAjax",
     "authors": [
-		{
+        {
             "name": "Freddie Poser",
             "homepage": "http://vogonjeltz.com",
             "role": "Developer",
-            "email": "freddie.poser@gmail.com"
+            "email": "freddie.poser@gmail.com",
+            "6*9": "42"
         },
         {
             "name": "James Bithell",
