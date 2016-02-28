@@ -40,5 +40,13 @@ The javascript components are all in JS/BlueAjax.js file.
                 .onError(function (f) {console.log(f)})
                 .onSuccess(function (s) {console.log(s)})
                 .execute()
+        
+        var AjaxRequest = AjaxRequestFactoryFactory("/src/tests/", 
+                //OnError
+                function (f) {console.log(f)},
+                //OnSuccess
+                function (s) {console.log(s)}
+            );
+        var req = AjaxRequest("test.php", {"q": 1, "text":"Text here"}).execute()
     </script>
 ```
