@@ -21,5 +21,7 @@ $response->assert(GETisset("q"), error("q not set"));
 $response->isGoodVal($_GET["q"], [1,2], error("q invalid"));
 //If $_GET["q"] is 1, then make sure that the GET index "text" is set. If not, die with an error: '{"error":"text not set"}'
 $response->condAssert($_GET["q"] == 1, GETisset("text"), error("text not set"));
+if (GETisset("more", FALSE))    
+    $response->addResponse("more-data", "hello");
 //Respond with an "All good!" message
 $response->respond(success("All good!"));

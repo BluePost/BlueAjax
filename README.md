@@ -14,7 +14,7 @@ require_once ('BlueAjax.php');
 ```
 
 ### JavaScript
-The javsript components are all in JS/BlueAjax.js file.
+The javascript components are all in JS/BlueAjax.js file.
 
 ## Using BlueAjax
 ```php

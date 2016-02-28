@@ -9,7 +9,7 @@ function GETisset ($index, $harsh = TRUE) {
     set_error_handler(function () {});
     $val = FALSE;
     try {
-        $val = ($harsh ? strictIsset($_GET[$index]) : laxIsset($_GET[$index]));
+        $val = ($harsh ? strictIsset($_GET[$index]) : isset($_GET[$index]));
     }
     catch (Exception $e) {$val = FALSE;}
     restore_error_handler();
@@ -26,7 +26,7 @@ function POSTisset($index, $harsh = TRUE) {
     set_error_handler(function () {});
     $val = FALSE;
     try {
-        $val = ($harsh ? strictIsset($_POST[$index]) : laxIsset($_POST[$index]));
+        $val = ($harsh ? strictIsset($_POST[$index]) : isset($_POST[$index]));
     }
     catch (Exception $e) {$val = FALSE;}
     restore_error_handler();
@@ -59,6 +59,6 @@ function strictIsset ($test, $notZero = FALSE, $notEmptyString = TRUE, $notNull 
  * @param type $NES - TRUE => Check that the variable is not "" (TRUE)
  * @return boolean
  */
-function laxIsset ($test, $NES = TRUE) {
+function laxIsset ($test, $NES = FALSE) {
     return strictIsset($test, FALSE, $NES, TRUE);
 }
