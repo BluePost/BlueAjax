@@ -53,7 +53,6 @@ function GetAjaxRequest(resource, data, successKey, errorKey) {
     
 }   
 
-
 function PostAjaxRequest(resource, data, successKey, errorKey) {
 
     if (typeof resource == 'undefined') throw Error("Resource Undefined")
