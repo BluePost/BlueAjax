@@ -24,4 +24,4 @@ $response->condAssert($_GET["q"] == 1, GETisset("text"), error("text not set"));
 if (GETisset("more", FALSE))    
     $response->addResponse("more-data", "hello");
 //Respond with an "All good!" message
-$response->respond(success("All good!"));
+$response->respond(success("All good!!", "success", $_GET));
