@@ -73,6 +73,7 @@ booleans being passed back and forth.
   * This will add the key-value pair to the inner response object which is used when the respond function is called.
 * `respond($response=Array(), $add=TRUE)`
   * This will die with the json_encoded value of `$response` merged with the inner response array (see `addResponse`). If `$add` is False then the inner array won't be used.
+
 #### Isset Functions
 * `GETisset($index, $harsh = TRUE)`
   * This function will return TRUE if `$_GET[$index]` isset. If `$harsh` is TRUE then the function will use `strictIsset`
