@@ -6,13 +6,14 @@
  * @return boolean
  */
 function GETisset ($index, $harsh = TRUE) {
-    set_error_handler(function () {});
+    $oldErrorLevel = error_reporting();
+    error_reporting(E_ALL ^ E_NOTICE);
     $val = FALSE;
     try {
         $val = ($harsh ? strictIsset($_GET[$index]) : isset($_GET[$index]));
     }
     catch (Exception $e) {$val = FALSE;}
-    restore_error_handler();
+    error_reporting($oldErrorLevel);
     return $val;
 }
 
@@ -23,13 +24,14 @@ function GETisset ($index, $harsh = TRUE) {
  * @return boolean
  */
 function POSTisset($index, $harsh = TRUE) {
-    set_error_handler(function () {});
+    $oldErrorLevel = error_reporting();
+    error_reporting(E_ALL ^ E_NOTICE);
     $val = FALSE;
     try {
         $val = ($harsh ? strictIsset($_POST[$index]) : isset($_POST[$index]));
     }
     catch (Exception $e) {$val = FALSE;}
-    restore_error_handler();
+    error_reporting($oldErrorLevel);
     return $val;
 }
 
