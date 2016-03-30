@@ -43,7 +43,7 @@ function POSTisset($index, $harsh = TRUE) {
  * @param type $notNull - TRUE => Check that the variable is not null (TRUE)
  * @return boolean
  */
-function strictIsset ($test, $notZero = FALSE, $notEmptyString = TRUE, $notNull = TRUE) {
+function strictIsset($test, $notZero = FALSE, $notEmptyString = TRUE, $notNull = TRUE) {
     if (!isset($test))
         return FALSE;
     if ($notZero && is_numeric($test) && intval($test) === 0)
