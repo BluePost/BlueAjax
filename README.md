@@ -1,3 +1,6 @@
+# Deprecated
+This lib has moved to become part of the larger [BlueUtils](https://github.com/BluePost/BlueUtils) and is not being maintained. It will be removed soon.
+
 # BlueAjax
 Super-Simple framework for making AJAX easier to deal with on the PHP side. It also includes some JS objects for communicating with an AJAX php script built using this lib.
 
